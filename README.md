@@ -15,6 +15,7 @@ A requirement for this data structure was that it could enable custom objects to
 important to pass a tuple of the type (Object, value to add)
 
 Example:
+    
     # When creating, give it a k value.
     m = BoundedPriorityQueue(5)
     print "Initial heap:", m.heap
