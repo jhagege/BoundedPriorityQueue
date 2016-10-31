@@ -5,6 +5,7 @@
 #
 # Code released under BSD license
 # 
+from __future__ import print_function
 DISTANCE_INDEX = 1
 
 class BoundedPriorityQueue:
@@ -22,7 +23,7 @@ class BoundedPriorityQueue:
         Parent will be at math.floor(index/2). Since integer division
         simulates the floor function, we don't explicity use it
         """
-        return index / 2
+        return int(index / 2)
 
     def left_child(self, index):
         return 2 * index + 1
@@ -138,7 +139,7 @@ if __name__ == '__main__':
     # For test purposes.
     # Create the heap object
     m = BoundedPriorityQueue(5)
-    print "Initial heap:", m.heap
+    print ("Initial heap:", m.heap)
 
     # Add an element to the heap
     m.add((None, 0.1))
@@ -149,10 +150,10 @@ if __name__ == '__main__':
     m.add((None, 0.4))
     m.add((None, 4.0))
 
-    print m.heap
-    print "Extract maximum:", m.extract_max()
-    print "Extract maximum:", m.extract_max()
-    print "Extract maximum:", m.extract_max()
-    print "Extract maximum:", m.extract_max()
+    print (m.heap)
+    print ("Extract maximum:", m.extract_max())
+    print ("Extract maximum:", m.extract_max())
+    print ("Extract maximum:", m.extract_max())
+    print ("Extract maximum:", m.extract_max())
     
-    print m.heap
+    print (m.heap)
